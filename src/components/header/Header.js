@@ -10,7 +10,12 @@ function Header() {
   return (
     <div className={classes.Header}>
       <div className={classes.Top}>
-        <img src={logo} className={classes.HeaderLogo} />
+        <div className={classes.MenuLogo}>
+          <a className={classes.Menu}>
+            <i className="fas fa-bars"></i>
+          </a>
+          <img src={logo} className={classes.HeaderLogo} />
+        </div>
         <div className={classes.HeaderButtons}>
           <HeaderButton icon={"fas fa-map-marker"} />
           <HeaderButton icon={"fas fa-heart"} />

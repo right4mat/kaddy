@@ -25,7 +25,7 @@
 }
 
 .Bottom {
-    height: 60px;
+  height: 60px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -37,35 +37,35 @@
   padding-right: 30px;
 }
 
-.SearchContainer{
-    position: relative;
-    width: 100%;
-    max-width: 350px;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-around;
-    background-color: #fff;
-    padding: 0px 0px 0px 8px;
-    border-radius: 6px;
-    overflow: hidden;
-    border:1px solid #d3d3d3;
+.SearchContainer {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+  padding: 0px 0px 0px 8px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #d3d3d3;
 }
 
-.Input{
-    display: block;
-    width: 100%;
-    font-size: inherit;
-    line-height: inherit;
-    color: #272368!important;
-    min-width: 100px;
-    min-height: 42px;
-    margin: 0;
-    border-image: none;
-    border-image: initial;    
-    border: 1px solid #d3d3d3;
-    padding: 0px 12px 0px 32px;
-    border: none;
+.Input {
+  display: block;
+  width: 100%;
+  font-size: inherit;
+  line-height: inherit;
+  color: #272368 !important;
+  min-width: 100px;
+  min-height: 42px;
+  margin: 0;
+  border-image: none;
+  border-image: initial;
+  border: 1px solid #d3d3d3;
+  padding: 0px 12px 0px 32px;
+  border: none;
 }
 
 .HeaderLogo {
@@ -80,30 +80,59 @@
   align-items: center;
 }
 
-.Type{
-    transition: all .5s;
-    font-size: larger;
-    color:#260f28;
-    padding: 7px;
-    font-weight: 600;
-    cursor: pointer;
+.Type {
+  transition: all 0.5s;
+  font-size: larger;
+  color: #260f28;
+  padding: 7px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-.Types{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-
+.Types {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.Type:hover{
-    color:#7f2f86;
+.Type:hover {
+  color: #7f2f86;
+}
+
+.Menu {
+  display: none;
+  color: #e4d6c7;
+  margin-right: 30px;
+  font-size: larger;
+}
+
+.Menu:hover {
+  color: #c2b4a6;
+}
+
+.MenuLogo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 @media (max-width: 992px) {
   .HeaderLogo {
-    height: 60px;
+    height: 40px;
     object-fit: contain;
+  }
+  .Menu {
+    display: flex;
+  }
+  .Types {
+    display: none;
+  }
+  .Type {
+    font-size: large;
+  }
+  .SearchContainer {
+    max-width: 100%;
   }
 }
