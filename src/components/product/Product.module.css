@@ -1,0 +1,48 @@
+.Product {
+  flex: 1;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+  box-sizing: border-box;
+  margin: 15px;
+  border-radius: 5px;
+  box-shadow: 0 7px 14px 0 rgba(60, 66, 87, 0.08),
+    0 3px 6px 0 rgba(0, 0, 0, 0.12);
+}
+
+.Price {
+  line-height: 1.4;
+  color: #333;
+  font-family: Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: x-large;
+}
+
+.Detail {
+  font-weight: 300;
+  color: #333;
+}
+
+.ProductImg {
+  height: 200px;
+  object-fit: contain;
+}
+
+.Buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.Details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
