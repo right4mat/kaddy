@@ -10,6 +10,7 @@ import Header from './components/header/Header';
 //page imports
 import Home from './pages/home/Home'
 import Map from './pages/map/Map'
+import Favorites from './pages/favorites/Favorites'
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route path="/locations">
             <Map />
+          </Route>
+          <Route path="/favorites">
+            <Favorites />
           </Route>
       </Switch>
     </div>

@@ -1,0 +1,45 @@
+.Home{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    padding: 7px;
+    background-color: rgba(255,255,255,0.7);
+}
+
+.Type{
+    width: 60vw;
+}
+.Carousel{
+    max-width: 100%;
+}
+
+.Hr{
+    width: 100%;
+    border-top: 1px solid #260f28;
+}
+
+.Header{
+    font-weight: 500;
+    color: #260f28;
+}
+
+@media (max-width: 1600px) {
+    .Type{
+        width: 70vw;
+    }
+}
+
+@media (max-width: 1400px) {
+    .Type{
+        width: 80vw;
+    }
+}
+
+@media (max-width: 1100px) {
+    .Type{
+        width: 95vw;
+    }
+}

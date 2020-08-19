@@ -4,8 +4,8 @@
   position: fixed;
   background-color: #260f28;
   top: 0;
-  min-width: 100vw;
-  max-width: 100vw;
+  min-width: 100%;
+  max-width: 100%;
   z-index: 30;
   border-bottom: 2px solid #d3d3d3;
 }
@@ -16,7 +16,7 @@
   flex-direction: row;
   align-items: center;
   background-color: #260f28;
-  width: 100vw;
+  width: 100%;
   height: 70px;
   z-index: 30;
   box-sizing: border-box;
@@ -37,36 +37,7 @@
   padding-right: 30px;
 }
 
-.SearchContainer {
-  position: relative;
-  width: 100%;
-  max-width: 350px;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  justify-content: space-around;
-  background-color: #fff;
-  padding: 0px 0px 0px 8px;
-  border-radius: 6px;
-  overflow: hidden;
-  border: 1px solid #d3d3d3;
-}
 
-.Input {
-  display: block;
-  width: 100%;
-  font-size: inherit;
-  line-height: inherit;
-  color: #272368 !important;
-  min-width: 100px;
-  min-height: 42px;
-  margin: 0;
-  border-image: none;
-  border-image: initial;
-  border: 1px solid #d3d3d3;
-  padding: 0px 12px 0px 32px;
-  border: none;
-}
 
 .HeaderLogo {
   height: 70px;
@@ -103,7 +74,7 @@
 .Menu {
   display: none;
   color: #e4d6c7;
-  margin-right: 30px;
+  margin-right: 15px;
   font-size: larger;
 }
 
@@ -134,5 +105,19 @@
   }
   .SearchContainer {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 400px){
+  .HeaderLogo {
+    height: 30px;
+    object-fit: contain;
+  }
+  .Type {
+    font-size: smaller;
+  }
+  .Top{
+    padding-right: 15px;
+    padding-left: 15px;
   }
 }

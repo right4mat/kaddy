@@ -1,11 +1,13 @@
 import React from "react";
+import Context from '../../context/Context'
 //css imports
 import classes from "./Product.module.css";
 //comp imports
-import LightButton from "../buttons/LightButton";
+import CheckButton from "../buttons/CheckButton";
 import FavoritesButton from "../buttons/FavoritesButton";
 
 function Product(props) {
+  
   return (
     <a className={classes.Product}>
       <img src={props.img} className={classes.ProductImg} />
@@ -15,8 +17,8 @@ function Product(props) {
         <p className={classes.Price}>{props.price}</p>
       </div>
       <div className={classes.Buttons}>
-        <FavoritesButton />
-        <LightButton text={"checkout"} />
+        <FavoritesButton toAdd={props} checked={props.fav} />
+        <CheckButton toCheck={props} text={"checkout"} />
       </div>
     </a>
   );

@@ -1,8 +1,12 @@
 .Page{
-    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    flex:1;
     display: flex;
     box-sizing: border-box;
     margin-top: 130px;
-    background-image: url('../../assets/pageTop.jpg');  
+    background-image: url('../../assets/pageTop.jpg');
     
 }

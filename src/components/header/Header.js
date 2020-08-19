@@ -1,12 +1,16 @@
 import React from "react";
+import {Link} from "react-router-dom";
+import Context from '../../context/Context';
 //css imports
 import classes from "./Header.module.css";
 //img imports
 import logo from "../../assets/logo.png";
 //comp imports
 import HeaderButton from "../buttons/HeaderButton";
+import SearchBar from "../searchBar/SearchBar";
 
 function Header() {
+  const{favorites, checked} = React.useContext(Context);
   return (
     <div className={classes.Header}>
       <div className={classes.Top}>
@@ -14,12 +18,12 @@ function Header() {
           <a className={classes.Menu}>
             <i className="fas fa-bars"></i>
           </a>
-          <img src={logo} className={classes.HeaderLogo} />
+          <Link to="/"><img src={logo} className={classes.HeaderLogo} /></Link>
         </div>
         <div className={classes.HeaderButtons}>
-          <HeaderButton icon={"fas fa-map-marker"} />
-          <HeaderButton icon={"fas fa-heart"} />
-          <HeaderButton icon={"fas fa-shopping-cart"} />
+          <HeaderButton icon={"fas fa-map-marker"} to={'/locations'} />
+          <HeaderButton icon={"fas fa-heart"} to={'/favorites'} count={Object.keys(favorites).length} />
+          <HeaderButton icon={"fas fa-shopping-cart"} count={Object.keys(checked).length}/>
         </div>
       </div>
       <div className={classes.Bottom}>
@@ -28,17 +32,7 @@ function Header() {
           <a className={classes.Type}>WINE</a>
           <a className={classes.Type}>BEER</a>
         </div>
-        <div className={classes.SearchContainer}>
-          <input
-            id="query"
-            placeholder="Search shop..."
-            className={classes.Input}
-            value=""
-          />
-          <div className={classes.SearchIcon}>
-            <i class="fas fa-search"></i>
-          </div>
-        </div>
+        <SearchBar/>
       </div>
     </div>
   );

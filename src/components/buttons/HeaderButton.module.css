@@ -12,10 +12,24 @@
     position: relative;
     text-align: center;
     width: 70px;
+    text-decoration: none;
 }
 
 .Button:hover{
     color: #c2b4a6;
+}
+.Count{
+    position: absolute;
+    top:-15px;
+    right:0;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(202, 41, 41);
+    font-size:15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -24,5 +38,9 @@
         font-size: 16px;
         font-size: 1.6rem;
         width: 50px;
+    }
+    .Count{
+        width: 25px;
+        height: 25px;
     }
 }
