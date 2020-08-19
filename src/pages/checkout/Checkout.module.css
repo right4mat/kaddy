@@ -1,0 +1,43 @@
+.Checkout{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 7px;
+    background-color: rgba(255,255,255,0.7);
+
+}
+
+.Row{
+    flex:1;
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.Img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.CheckoutInner{
+    width:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    box-sizing: border-box;
+    margin: 30px;
+    border-radius: 5px;
+    box-shadow: 0 7px 14px 0 rgba(60, 66, 87, 0.08),
+      0 3px 6px 0 rgba(0, 0, 0, 0.12);
+      background-color: #f2f2f2;
+
+}

@@ -6,6 +6,7 @@ import Context from "./Context";
 export default function Provider(props) {
   const [favorites, setFavorites] = React.useState({});
   const [checked, setChecked] = React.useState({});
+  const [search, setSearch] = React.useState('');
 
 
 
@@ -13,7 +14,8 @@ export default function Provider(props) {
     <Context.Provider
       value={{
         favorites, setFavorites,
-        checked, setChecked 
+        checked, setChecked,
+        search, setSearch
       }}
     >
       {props.children}

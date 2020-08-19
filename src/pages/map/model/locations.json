@@ -1,0 +1,60 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Annandale",
+          "open": "8:30am - 10pm"},
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            151.1660385131836,
+            -33.884382394039044
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Randwick",
+          "open": "8:30am - 10pm"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            151.24156951904297,
+            -33.915015927553256
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Surry Hills",
+          "open": "8:30am - 10pm"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            151.21049880981445,
+            -33.88480991439996
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Vaucluse",
+          "open": "8:30am - 10pm"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            151.27727508544922,
+            -33.85758684489136
+          ]
+        }
+      }
+    ]
+  }

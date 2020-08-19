@@ -11,6 +11,10 @@ import SearchBar from "../searchBar/SearchBar";
 
 function Header() {
   const{favorites, checked} = React.useContext(Context);
+  let favCount  = Object.keys(favorites).length;
+  let checkCount = 0;
+  //get total checked items
+  Object.keys(checked).forEach(x=>checkCount += checked[x])
   return (
     <div className={classes.Header}>
       <div className={classes.Top}>
@@ -22,15 +26,15 @@ function Header() {
         </div>
         <div className={classes.HeaderButtons}>
           <HeaderButton icon={"fas fa-map-marker"} to={'/locations'} />
-          <HeaderButton icon={"fas fa-heart"} to={'/favorites'} count={Object.keys(favorites).length} />
-          <HeaderButton icon={"fas fa-shopping-cart"} count={Object.keys(checked).length}/>
+          <HeaderButton icon={"fas fa-heart"} to={'/favorites'} count={favCount} />
+          <HeaderButton icon={"fas fa-shopping-cart"} to={'/checkout'} count={checkCount}/>
         </div>
       </div>
       <div className={classes.Bottom}>
         <div className={classes.Types}>
-          <a className={classes.Type}>SPIRITS</a>
-          <a className={classes.Type}>WINE</a>
-          <a className={classes.Type}>BEER</a>
+          <Link to='/search/Spirits/liqueur' className={classes.Type}>SPIRITS</Link>
+          <Link to='/search/Wine/wine' className={classes.Type}>WINE</Link>
+          <Link to='/search/Beer/beer' className={classes.Type}>BEER</Link>
         </div>
         <SearchBar/>
       </div>
