@@ -11,6 +11,7 @@ import Map from "./pages/map/Map";
 import Favorites from "./pages/favorites/Favorites";
 import Search from "./pages/search/Search";
 import Checkout from "./pages/checkout/Checkout";
+import FourZeroFour from "./pages/404/404";
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
         </Route>
         <Route path="/checkout">
           <Checkout />
+        </Route>
+        <Route>
+          <FourZeroFour />
         </Route>
       </Switch>
     </div>

@@ -3,8 +3,8 @@ import Carousel from "react-multi-carousel";
 import Context from "../../context/Context";
 import { unsplash } from "../../service/unsplash";
 //css imports
-import shared from "../sharedStyle/Style.module.css";
-import classes from "./Favorites.module.css";
+import classes from "../sharedStyle/Style.module.css";
+import favorites from "./Favorites.module.css";
 import "react-multi-carousel/lib/styles.css";
 //comp imports
 import Product from "../../components/product/Product";
@@ -60,8 +60,8 @@ function Favorites() {
   });
 
   return (
-    <div className={shared.Page}>
-      <div className={classes.Home}>
+    <div className={classes.Page}>
+      <div className={classes.Inner}>
 
         {loading ? <Loading/> : <div className={classes.Type}>
           <h1 className={classes.Header}>

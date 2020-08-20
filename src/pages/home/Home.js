@@ -2,8 +2,8 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import { unsplash, collections } from "../../service/unsplash";
 //css imports
-import shared from "../sharedStyle/Style.module.css";
-import classes from "./Home.module.css";
+import classes from "../sharedStyle/Style.module.css";
+import home from "./Home.module.css";
 import "react-multi-carousel/lib/styles.css";
 //comp imports
 import Product from "../../components/product/Product";
@@ -77,8 +77,8 @@ function Home() {
       });
   }, []);
   return (
-    <div className={shared.Page}>
-      <div className={classes.Home}>
+    <div className={classes.Page}>
+      <div className={classes.Inner}>
         {beer.length && wine.length && spirit.length ? (
           <>
             <div className={classes.Type}>

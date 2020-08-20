@@ -3,8 +3,8 @@ import Carousel from "react-multi-carousel";
 import { unsplash, collections } from "../../service/unsplash";
 import { useParams } from "react-router-dom";
 //css imports
-import shared from "../sharedStyle/Style.module.css";
-import classes from "./Search.module.css";
+import classes from "../sharedStyle/Style.module.css";
+import searches from "./Search.module.css";
 import "react-multi-carousel/lib/styles.css";
 //comp imports
 import Product from "../../components/product/Product";
@@ -55,12 +55,12 @@ function Search() {
   });
 
   return (
-    <div className={shared.Page}>
-      <div className={classes.Home}>
+    <div className={classes.Page}>
+      <div className={classes.Inner}>
         <div className={classes.Type}>
           <h1 className={classes.Header}>{name}</h1>
           <hr className={classes.Hr} />
-          <div className={classes.Results}>
+          <div className={searches.Results}>
             {loading ? (
               <Loading />
             ) : (
@@ -69,7 +69,7 @@ function Search() {
                   key={x.id}
                   id={x.id}
                   img={x.urls.regular}
-                  brand={search}
+                  brand={"Brand name"}
                   details={x.alt_description}
                 />
               ))
