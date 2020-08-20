@@ -6,7 +6,7 @@ A small drinks ordering system example
 
 1.no persistent state
 
-*staying wthin the 3-4hr time i decided not to for go this. This could easily be implemented with either local, session or async API's
+* staying wthin the 3-4hr time i decided not to for go this. This could easily be implemented with either local, session or async API's
 
 2.redundant network calls
 
