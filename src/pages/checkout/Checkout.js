@@ -23,7 +23,6 @@ const Row = (props) => {
 function Favorites() {
   const { checked } = React.useContext(Context);
   const [checkedArr, setCheckedArr] = React.useState([]);
-  const [loading, setLoading] = React.useState(Object.keys(checked).length);
   const [totalCost, setTotalCost] = React.useState(0);
 
   React.useEffect(() => {
@@ -37,13 +36,12 @@ function Favorites() {
             (oldCost) =>
               oldCost + price(json.alt_description) * checked[json.id]
           );
-          setLoading(false);
         })
         .catch((err) => {
           alert("oops something went wrong");
         })
     );
-  }, []);
+  }, [checked]);
 
   return (
     <div className={classes.Page}>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Context from "../../context/Context";
 import { price } from "../../helpers/helpers";
 //css imports

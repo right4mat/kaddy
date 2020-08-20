@@ -4,15 +4,11 @@ import Context from "../../context/Context";
 import { unsplash } from "../../service/unsplash";
 //css imports
 import classes from "../sharedStyle/Style.module.css";
-import favorites from "./Favorites.module.css";
 import "react-multi-carousel/lib/styles.css";
 //comp imports
 import Product from "../../components/product/Product";
 import Loading from "../../components/loading/Loading";
 
-const wine = "https://assets.langtons.com.au/images/B0403108.png";
-const beer = "https://media.danmurphys.com.au/dmo/product/839496-1.png";
-const spirits = "https://media.danmurphys.com.au/dmo/product/907623-1.png";
 
 const responsive = {
   superLargeDesktop: {
@@ -59,7 +55,7 @@ function Favorites() {
       
       setFavoritesOld(Object.keys(favorites).length)
     }
-  });
+  },[favorites, favoritesOld]);
 
   return (
     <div className={classes.Page}>

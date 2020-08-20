@@ -35,7 +35,7 @@ function Search() {
         })
       setOldSearch(search);
     }
-  });
+  },[search, oldSearch]);
 
   return (
     <div className={classes.Page}>

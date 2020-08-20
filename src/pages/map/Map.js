@@ -6,7 +6,7 @@ import classes from "./Map.module.css";
 //comp imports
 
 function Map() {
-  const [mapState, setMapState] = React.useState({
+  const [mapState] = React.useState({
     lng: 151.20732,
     lat: -33.86785,
     zoom: 11,
@@ -65,7 +65,7 @@ function Map() {
         map.getCanvas().style.cursor = "";
       });
     });
-  }, []);
+  }, [mapState.lat, mapState.lng, mapState.zoom]);
   return (
     <div className={shared.Page}>
       <div id="map" className={classes.map} />
