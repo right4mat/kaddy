@@ -39,6 +39,8 @@ function Favorites() {
             oldCost => oldCost + price(json.alt_description) * checked[json.id]
           );
           setLoading(false);
+        }).catch(err => {
+          alert("oops something went wrong")
         })
     );
   }, []);

@@ -49,7 +49,9 @@ function Search() {
         .then((json) => {
           setSearchArr(json.results);
           setLoading(false)
-        });
+        }).catch(err => {
+          alert("oops something went wrong")
+        })
       setOldSearch(search);
     }
   });
