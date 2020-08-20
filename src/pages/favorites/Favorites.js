@@ -9,7 +9,6 @@ import "react-multi-carousel/lib/styles.css";
 import Product from "../../components/product/Product";
 import Loading from "../../components/loading/Loading";
 
-
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -33,51 +32,53 @@ const responsive = {
 function Favorites() {
   const { favorites } = React.useContext(Context);
   const [favoritesArr, setFavoritesArr] = React.useState([]);
-  const[favoritesOld, setFavoritesOld] = React.useState(0);
+  const [favoritesOld, setFavoritesOld] = React.useState(0);
   const [loading, setLoading] = React.useState(Object.keys(favorites).length);
-
 
   React.useEffect(() => {
     if (Object.keys(favorites).length !== favoritesOld) {
-      setLoading(true)
-      setFavoritesArr([])//clear so old favs can be removed
-      Object.keys(favorites).forEach((id) =>
+      setFavoritesArr([]); //clear so old favs can be removed
+      Object.keys(favorites).forEach((id) => {
+        setLoading(true);
         unsplash.photos
           .getPhoto(id)
           .then((toJson) => toJson.json())
           .then((json) => {
             setFavoritesArr((oldArray) => [...oldArray, json]);
-            setLoading(false)
-          }).catch(err => {
-            alert("oops something went wrong")
+            setLoading(false);
           })
-      );
-      
-      setFavoritesOld(Object.keys(favorites).length)
+          .catch((err) => {
+            setLoading(false);
+            alert("oops something went wrong");
+          });
+      });
+
+      setFavoritesOld(Object.keys(favorites).length);
     }
-  },[favorites, favoritesOld]);
+  }, [favorites, favoritesOld]);
 
   return (
     <div className={classes.Page}>
       <div className={classes.Inner}>
-
-        {loading ? <Loading/> : <div className={classes.Type}>
-          <h1 className={classes.Header}>
-            Your Favorites
-          </h1>
-          <hr className={classes.Hr} />
-          <Carousel responsive={responsive} containerClass={classes.Carousel}>
-            {favoritesArr.map((x) => (
-              <Product
-                key={x.id}
-                id={x.id}
-                img={x.urls.regular}
-                brand={"Brand name"}
-                details={x.alt_description}
-              />
-            ))}
-          </Carousel>
-        </div>}
+        {loading ? (
+          <Loading />
+        ) : (
+          <div className={classes.Type}>
+            <h1 className={classes.Header}>Your Favorites</h1>
+            <hr className={classes.Hr} />
+            <Carousel responsive={responsive} containerClass={classes.Carousel}>
+              {favoritesArr.map((x) => (
+                <Product
+                  key={x.id}
+                  id={x.id}
+                  img={x.urls.regular}
+                  brand={"Brand name"}
+                  details={x.alt_description}
+                />
+              ))}
+            </Carousel>
+          </div>
+        )}
       </div>
     </div>
   );
