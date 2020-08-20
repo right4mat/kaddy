@@ -9,21 +9,24 @@ import CheckButton from "../buttons/CheckButton";
 import ItemAmount from "../itemAmount/ItemAmount";
 
 function Product(props) {
-  const { checked } = React.useContext(Context);
+  const{checked, setChecked} = React.useContext(Context);
+  const handleAddChecked = () =>{
+    setChecked({...checked, [props.id]: 1})
+  }
   return (
     <div className={classes.Product}>
       <img src={props.img} className={classes.ProductImg} />
       <div className={classes.Details}>
         <p>{props.brand}</p>
         <p className={classes.Detail}>{props.details}</p>
-        <p className={classes.Price}>{price(props.details)}</p>
+        <p className={classes.Price}>{'$'+price(props.details)}</p>
       </div>
       {checked[props.id] ? (
         <ItemAmount id={props.id} />
       ) : (
         <div className={classes.Buttons}>
           <FavoritesButton id={props.id} />
-          <CheckButton id={props.id} text={"checkout"} />
+          <CheckButton id={props.id} text={"checkout"} callback={handleAddChecked} />
         </div>
       )}
     </div>

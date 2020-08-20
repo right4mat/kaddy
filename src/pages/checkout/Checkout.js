@@ -9,13 +9,14 @@ import classes from "./Checkout.module.css";
 import "react-multi-carousel/lib/styles.css";
 //comp imports
 import Loading from "../../components/loading/Loading";
+import Checkout from "../../components/buttons/CheckButton"
 
 const Row = (props) => {
   return (
     <div className={classes.Row}>
       <img className={classes.Img} src={props.img} />
       <div>{props.amount}</div>
-      <div>{props.cost}</div>
+      <div>{'$'+(props.cost * props.amount).toFixed(2)}</div>
     </div>
   );
 };
@@ -49,7 +50,7 @@ function Favorites() {
           {checkedArr.map((x) => (
             <Row img={x.urls.thumb} amount={checked[x.id]} cost={price(x.alt_description)} />
           ))}
-          <button>CHECKOUT</button>
+          <Checkout text={"CHECKOUT"}/>
         </div>
       </div>
     </div>
