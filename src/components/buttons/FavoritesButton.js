@@ -20,7 +20,7 @@ function FavoritesButton(props) {
     }
   };
   return (
-    <a
+    <div
       className={
         props.id in favorites
           ? `${classes.Clicked} ${classes.Button}`
@@ -29,7 +29,7 @@ function FavoritesButton(props) {
       onClick={() => handleAddFav()}
     >
       <i className="far fa-heart"></i>
-    </a>
+    </div>
   );
 }
 

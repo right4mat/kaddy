@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Context from "../../context/Context";
 import { price } from "../../helpers/helpers";
 //css imports
@@ -15,7 +15,7 @@ function Product(props) {
   }
   return (
     <div className={classes.Product}>
-      <img src={props.img} className={classes.ProductImg} />
+      <img src={props.img} className={classes.ProductImg} alt={props.details} />
       <div className={classes.Details}>
         <p>{props.brand}</p>
         <p className={classes.Detail}>{props.details}</p>

@@ -1,7 +1,6 @@
 import React from "react";
 //css imports
 import classes from "../sharedStyle/Style.module.css";
-import fourStyle from "./404.module.css";
 //comp imports
 
 function FourZeroFour() {

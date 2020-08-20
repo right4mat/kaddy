@@ -1,8 +1,6 @@
 import React from "react";
 //css imports
 import classes from "./Loading.module.css";
-//img imports
-import loading from "../../assets/loading.svg";
 
 function Loading(props) {
   return (

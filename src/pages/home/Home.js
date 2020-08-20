@@ -3,7 +3,6 @@ import Carousel from "react-multi-carousel";
 import { unsplash, collections } from "../../service/unsplash";
 //css imports
 import classes from "../sharedStyle/Style.module.css";
-import home from "./Home.module.css";
 import "react-multi-carousel/lib/styles.css";
 //comp imports
 import Product from "../../components/product/Product";
@@ -45,7 +44,6 @@ function Home() {
       )
       .then((toJson) => toJson.json())
       .then((json) => {
-        console.log(json.results);
         setWine(json.results);
       }).catch(err => {
         alert("oops something went wrong")
@@ -61,7 +59,6 @@ function Home() {
       )
       .then((toJson) => toJson.json())
       .then((json) => {
-        console.log(json.results);
         setBeer(json.results);
       }).catch(err => {
         alert("oops something went wrong")

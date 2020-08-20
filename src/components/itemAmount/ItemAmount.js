@@ -7,13 +7,13 @@ function ItemAmount(props) {
   const { checked, setChecked } = React.useContext(Context);
   return (
     <div className={classes.ItemAmount}>
-      <a className={classes.Button} onClick={()=>setChecked({...checked, [props.id]: checked[props.id]-1})} >
+      <div className={classes.Button} onClick={()=>setChecked({...checked, [props.id]: checked[props.id]-1})} >
         <i className="fas fa-minus-circle"></i>
-      </a>
+      </div>
       <div className={classes.Number}>{checked[props.id]}</div>
-      <a className={classes.Button} onClick={()=>setChecked({...checked, [props.id]: checked[props.id]+1})}>
+      <div className={classes.Button} onClick={()=>setChecked({...checked, [props.id]: checked[props.id]+1})}>
         <i className="fas fa-plus-circle"></i>
-      </a>
+      </div>
     </div>
   );
 }
