@@ -4,25 +4,25 @@ A small drinks ordering system example
 
 ## technical compromises
 
-1.no persistent state
+-no persistent state
 
-- staying wthin the 3-4hr time i decided to for go this. This could easily be implemented with either local, session or async API's
+staying wthin the 3-4hr time i decided to for go this. This could easily be implemented with either local, session or async API's
 
-  2.redundant network calls
+-redundant network calls
 
-- as this was a project to involve unsplash i chose for projects sake to only store IDs in the context api rather then the whole json node. this way i could use more of the unsplash API.
+as this was a project to involve unsplash i chose for projects sake to only store IDs in the context api rather then the whole json node. this way i could use more of the unsplash API.
 
-  3.No site footer
+-No site footer
 
-- i felt this wouldnt really add anything extra in terms of 'technical skil'
+i felt this wouldnt really add anything extra in terms of 'technical skil'
 
-4. Limited Media Queries
+-Limited Media Queries
 
-- Again for the sake of time, i didnt optimise the css layouts for all screen sizes
+Again for the sake of time, i didnt optimise the css layouts for all screen sizes
 
-  5.No hamburger menu
+ -No hamburger menu
 
--Again time related. Really the 'spirits', 'wine' and 'beer' menu in the header could have been moved to a slide out hamburger menu when viewing on smaller screens.
+Again time related. Really the 'spirits', 'wine' and 'beer' menu in the header could have been moved to a slide out hamburger menu when viewing on smaller screens.
 
 ## Available Scripts
 
