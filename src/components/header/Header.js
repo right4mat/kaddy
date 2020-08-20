@@ -19,9 +19,6 @@ function Header() {
     <div className={classes.Header}>
       <div className={classes.Top}>
         <div className={classes.MenuLogo}>
-          <a className={classes.Menu}>
-            <i className="fas fa-bars"></i>
-          </a>
           <Link to="/"><img src={logo} className={classes.HeaderLogo} /></Link>
         </div>
         <div className={classes.HeaderButtons}>
