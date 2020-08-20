@@ -8,7 +8,7 @@ import Provider from './context/Provider';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/kaddy">
       <Provider>
         <App />
       </Provider>

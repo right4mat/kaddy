@@ -19,7 +19,7 @@ function Header() {
     <div className={classes.Header}>
       <div className={classes.Top}>
         <div className={classes.MenuLogo}>
-          <Link to="/"><img src={logo} className={classes.HeaderLogo} /></Link>
+          <Link to="/"><img src={logo} className={classes.HeaderLogo} alt="logo" /></Link>
         </div>
         <div className={classes.HeaderButtons}>
           <HeaderButton icon={"fas fa-map-marker"} to={'/locations'} />

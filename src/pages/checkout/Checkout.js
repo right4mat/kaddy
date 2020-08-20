@@ -1,5 +1,4 @@
 import React from "react";
-import Carousel from "react-multi-carousel";
 import Context from "../../context/Context";
 import { unsplash } from "../../service/unsplash";
 import { price } from "../../helpers/helpers";
@@ -8,14 +7,13 @@ import classes from "../sharedStyle/Style.module.css";
 import checkoutStyle from "./Checkout.module.css";
 import "react-multi-carousel/lib/styles.css";
 //comp imports
-import Loading from "../../components/loading/Loading";
 import Checkout from "../../components/buttons/CheckButton";
 import BackButton from "../../components/buttons/BackButton";
 
 const Row = (props) => {
   return (
     <div className={checkoutStyle.Row}>
-      <img className={checkoutStyle.Img} src={props.img} />
+      <img className={checkoutStyle.Img} src={props.img} alt={props.details}/>
       <div>{props.amount}</div>
       <div>{"$" + (props.cost * props.amount).toFixed(2)}</div>
     </div>
@@ -36,11 +34,13 @@ function Favorites() {
         .then((json) => {
           setCheckedArr((oldArray) => [...oldArray, json]);
           setTotalCost(
-            oldCost => oldCost + price(json.alt_description) * checked[json.id]
+            (oldCost) =>
+              oldCost + price(json.alt_description) * checked[json.id]
           );
           setLoading(false);
-        }).catch(err => {
-          alert("oops something went wrong")
+        })
+        .catch((err) => {
+          alert("oops something went wrong");
         })
     );
   }, []);
@@ -50,24 +50,34 @@ function Favorites() {
       <div className={classes.Inner}>
         <div className={checkoutStyle.CheckoutInner}>
           <div className={checkoutStyle.Row}>
-            <div><b>Item</b></div>
-            <div><b>Amount</b></div>
-            <div><b>Cost</b></div>
+            <div>
+              <b>Item</b>
+            </div>
+            <div>
+              <b>Amount</b>
+            </div>
+            <div>
+              <b>Cost</b>
+            </div>
           </div>
           {checkedArr.map((x) => (
             <Row
+              key={x.id}
               img={x.urls.thumb}
               amount={checked[x.id]}
+              details={x.alt_description}
               cost={price(x.alt_description)}
             />
           ))}
           <div className={checkoutStyle.TotalCost}>
-              <b>Total: </b>$
-              {totalCost.toFixed(2)}
-            </div>{" "}
+            <b>Total: </b>${totalCost.toFixed(2)}
+          </div>{" "}
           <div className={checkoutStyle.Footer}>
             <BackButton text={"KEEP SHOPPING"} />
-            <Checkout text={"CHECKOUT"} callback={()=>window.location.href='/'} />
+            <Checkout
+              text={"CHECKOUT"}
+              callback={() => (window.location.href = "/")}
+            />
           </div>
         </div>
       </div>
