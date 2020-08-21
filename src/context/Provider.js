@@ -4,18 +4,18 @@ import Context from "./Context";
 
 
 export default function Provider(props) {
-  const [favorites, setFavorites] = React.useState({});
+  const [likeStatus, setLikeStatus] = React.useState({});
   const [checked, setChecked] = React.useState({});
-  const [search, setSearch] = React.useState('');
+  const [fitler, setFilter] = React.useState('popular');
 
 
 
   return (
     <Context.Provider
       value={{
-        favorites, setFavorites,
+        likeStatus, setLikeStatus,
         checked, setChecked,
-        search, setSearch
+        fitler, setFilter
       }}
     >
       {props.children}

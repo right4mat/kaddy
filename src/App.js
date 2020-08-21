@@ -8,7 +8,7 @@ import Header from "./components/header/Header";
 //page imports
 import Home from "./pages/home/Home";
 import Map from "./pages/map/Map";
-import Favorites from "./pages/favorites/Favorites";
+import Likes from "./pages/favorites/Likes";
 import Search from "./pages/search/Search";
 import Checkout from "./pages/checkout/Checkout";
 import FourZeroFour from "./pages/404/404";
@@ -25,9 +25,9 @@ function App() {
           <Map />
         </Route>
         <Route path="/favorites">
-          <Favorites />
+          <Likes />
         </Route>
-        <Route path="/search/:name/:search">
+        <Route path="/search/:search">
           <Search />
         </Route>
         <Route path="/checkout">

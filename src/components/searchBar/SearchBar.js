@@ -8,14 +8,14 @@ function SearchBar() {
   const history = useHistory()
   const handleEnter = (event) => {
     if (event.key === 'Enter') {
-      history.push("/search/Results/"+search)
+      history.push("/search/"+search)
     }
   }
   return (
     <div className={classes.SearchContainer}>
       <input
         id="query"
-        placeholder="Search shop..."
+        placeholder="Search images..."
         className={classes.Input}
         value={search}
         onChange={x=>setSearch(x.target.value)}

@@ -1,7 +1,7 @@
 .Product {
   transition: all 0.5s;
   flex: 1;
-  height: 550px;
+  height: 350px;
   max-width: 325px;
   min-width: 250px;
   background-color: #f2f2f2;
@@ -17,19 +17,18 @@
     0 3px 6px 0 rgba(0, 0, 0, 0.12);
 }
 
-.Price {
-  line-height: 1.4;
-  color: #333;
-  font-family: Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: x-large;
-}
+
 
 .Detail {
+  max-width: 250px;
+  min-width: 250px;
   transition: all 0.5s;
   font-weight: 300;
   color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
 }
 
 .ProductImg {

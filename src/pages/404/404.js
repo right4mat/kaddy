@@ -8,7 +8,6 @@ function FourZeroFour() {
     <div className={classes.Page}>
       <div className={classes.Inner}>
         <div>
-          <h1>404</h1>
           <h3>nothing here...</h3>
         </div>
       </div>
